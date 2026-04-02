@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ember & Oak — Fine Dining</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-text">
+      <span>E</span><span>m</span><span>b</span><span>e</span><span>r</span>
+      <span class="amp">&</span>
+      <span>O</span><span>a</span><span>k</span>
+    </div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">Ember <span>&</span> Oak</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservations">Reserve</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#menu" class="mobile-link">Menu</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#reservations" class="mobile-link">Reserve</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Est. 2018 · New York</p>
+      <h1 class="hero-title">
+        <span class="reveal-up delay-1">Where Fire</span>
+        <span class="reveal-up delay-2"><em>Meets Flavour</em></span>
+      </h1>
+      <p class="hero-sub reveal-up delay-3">Wood-fired cuisine crafted from the land's finest offerings</p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#reservations" class="btn btn-light">Reserve a Table</a>
+        <a href="#menu" class="btn btn-ghost">Explore Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+    <div class="hero-badge">
+      <svg viewBox="0 0 120 120"><path id="badge-circle" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/><text><textPath href="#badge-circle">★ MICHELIN STAR 2024 ★ BEST RESTAURANT ★</textPath></text></svg>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="about-image-wrap">
+      <div class="about-img-card img1"></div>
+      <div class="about-img-card img2"></div>
+      <div class="about-stat">
+        <span class="stat-num counter" data-target="12">0</span>
+        <span class="stat-label">Years of Mastery</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-label reveal-up">Our Story</p>
+      <h2 class="section-title reveal-up">Passion Plated,<br/><em>Every Night</em></h2>
+      <p class="about-text reveal-up">Ember & Oak was born from a singular obsession: to honour the rawness of fire and the patience of slow cooking. Chef Marco Reyes trained under three Michelin-starred kitchens across Europe before returning home to build something unforgettable.</p>
+      <p class="about-text reveal-up">Every dish is a meditation. Every ingredient is sourced within 100 miles. Every evening is a ritual.</p>
+      <div class="about-pills reveal-up">
+        <span>Farm-to-Table</span>
+        <span>Wood-Fired</span>
+        <span>Seasonal Menu</span>
+        <span>Craft Cocktails</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="counter" data-target="48">0</span>
+      <p>Signature Dishes</p>
+    </div>
+    <div class="stat-item">
+      <span class="counter" data-target="200">0</span>
+      <p>Wine Labels</p>
+    </div>
+    <div class="stat-item">
+      <span class="counter" data-target="98">0</span>
+      <p>% Local Ingredients</p>
+    </div>
+    <div class="stat-item">
+      <span class="counter" data-target="7">0</span>
+      <p>Awards Won</p>
+    </div>
+  </div>
+
+  <!-- Menu Section -->
+  <section class="menu section" id="menu">
+    <div class="menu-header">
+      <p class="section-label reveal-up">Curated Selection</p>
+      <h2 class="section-title reveal-up">Tonight's <em>Menu</em></h2>
+      <div class="menu-tabs reveal-up">
+        <button class="tab active" data-tab="starters">Starters</button>
+        <button class="tab" data-tab="mains">Mains</button>
+        <button class="tab" data-tab="desserts">Desserts</button>
+        <button class="tab" data-tab="drinks">Drinks</button>
+      </div>
+    </div>
+    <div class="menu-grid" id="menu-grid">
+      <!-- Starters -->
+      <div class="menu-tab-content active" data-content="starters">
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Smoked Burrata</h3>
+            <p>Heritage tomatoes · basil oil · aged balsamic · fleur de sel</p>
+          </div>
+          <span class="mi-price">$22</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Tuna Crudo</h3>
+            <p>Yellowfin · avocado mousse · jalapeño · yuzu ponzu · micro shiso</p>
+          </div>
+          <span class="mi-price">$28</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Wild Mushroom Toast</h3>
+            <p>Sourdough · truffle ricotta · hen-of-the-woods · thyme</p>
+          </div>
+          <span class="mi-price">$19</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Bone Marrow</h3>
+            <p>Roasted marrow · chimichurri · grilled sourdough · sea salt</p>
+          </div>
+          <span class="mi-price">$24</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Oysters (½ Dozen)</h3>
+            <p>East Coast · mignonette · lemon · hot sauce</p>
+          </div>
+          <span class="mi-price">$32</span>
+        </div>
+        <div class="menu-item featured">
+          <span class="feat-tag">Chef's Choice</span>
+          <div class="mi-info">
+            <h3>Foie Gras Torchon</h3>
+            <p>Brioche · Sauternes gel · Granny Smith · candied pecan</p>
+          </div>
+          <span class="mi-price">$38</span>
+        </div>
+      </div>
+      <!-- Mains -->
+      <div class="menu-tab-content" data-content="mains">
+        <div class="menu-item featured">
+          <span class="feat-tag">Signature</span>
+          <div class="mi-info">
+            <h3>Ember-Roasted Wagyu Côte de Boeuf</h3>
+            <p>A5 Wagyu · bone marrow butter · truffle jus · roasted garlic</p>
+          </div>
+          <span class="mi-price">$145</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Wild Halibut</h3>
+            <p>Saffron velouté · clams · sea vegetables · lemon butter</p>
+          </div>
+          <span class="mi-price">$58</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Heritage Pork Chop</h3>
+            <p>Berkshire pork · apple gastrique · celery root purée · calvados</p>
+          </div>
+          <span class="mi-price">$52</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Roasted Duck Breast</h3>
+            <p>Cherry reduction · dauphinoise · wilted spinach · duck jus</p>
+          </div>
+          <span class="mi-price">$64</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Wild Mushroom Risotto</h3>
+            <p>Porcini · arborio · aged Parmesan · black truffle shavings</p>
+          </div>
+          <span class="mi-price">$44</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Whole Roasted Chicken</h3>
+            <p>Free-range · herb butter · roasted root vegetables · pan jus</p>
+          </div>
+          <span class="mi-price">$48</span>
+        </div>
+      </div>
+      <!-- Desserts -->
+      <div class="menu-tab-content" data-content="desserts">
+        <div class="menu-item featured">
+          <span class="feat-tag">Must Try</span>
+          <div class="mi-info">
+            <h3>Valrhona Chocolate Fondant</h3>
+            <p>Dark 72% · salted caramel · vanilla bean ice cream · hazelnut praline</p>
+          </div>
+          <span class="mi-price">$18</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Lemon Tart</h3>
+            <p>Italian meringue · lemon curd · shortcrust pastry · raspberry coulis</p>
+          </div>
+          <span class="mi-price">$16</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Crème Brûlée</h3>
+            <p>Classic vanilla · caramelised sugar · seasonal berries</p>
+          </div>
+          <span class="mi-price">$14</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Cheese Board</h3>
+            <p>Selection of artisan cheeses · fig jam · honeycomb · walnut bread</p>
+          </div>
+          <span class="mi-price">$26</span>
+        </div>
+      </div>
+      <!-- Drinks -->
+      <div class="menu-tab-content" data-content="drinks">
+        <div class="menu-item featured">
+          <span class="feat-tag">Bar Favourite</span>
+          <div class="mi-info">
+            <h3>Ember Old Fashioned</h3>
+            <p>Smoked bourbon · demerara · Angostura · orange peel</p>
+          </div>
+          <span class="mi-price">$22</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Garden Negroni</h3>
+            <p>Gin · Campari · vermouth · cucumber · rosemary</p>
+          </div>
+          <span class="mi-price">$20</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Oak & Honey Sour</h3>
+            <p>Whisky · honey syrup · lemon juice · egg white · bitters</p>
+          </div>
+          <span class="mi-price">$20</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Sommelier's Pick — Burgundy</h3>
+            <p>Gevrey-Chambertin 1er Cru 2019 · Domaine Rossignol-Trapet</p>
+          </div>
+          <span class="mi-price">$95</span>
+        </div>
+        <div class="menu-item">
+          <div class="mi-info">
+            <h3>Non-Alcoholic Flight</h3>
+            <p>Three seasonal house shrubs · sparkling · garnished</p>
+          </div>
+          <span class="mi-price">$18</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="gallery-header">
+      <p class="section-label reveal-up">Ambience & Art</p>
+      <h2 class="section-title reveal-up">Inside <em>Ember & Oak</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-tall" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop')">
+        <div class="g-overlay"><span>The Dining Room</span></div>
+      </div>
+      <div class="g-item" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop')">
+        <div class="g-overlay"><span>Chef's Selection</span></div>
+      </div>
+      <div class="g-item" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop')">
+        <div class="g-overlay"><span>The Bar</span></div>
+      </div>
+      <div class="g-item" style="background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?w=800&auto=format&fit=crop')">
+        <div class="g-overlay"><span>Wood-Fire Kitchen</span></div>
+      </div>
+      <div class="g-item g-wide" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&auto=format&fit=crop')">
+        <div class="g-overlay"><span>Private Dining</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chef Section -->
+  <section class="chef section">
+    <div class="chef-img"></div>
+    <div class="chef-content">
+      <p class="section-label reveal-up">The Visionary</p>
+      <h2 class="section-title reveal-up">Chef Marco<br/><em>Reyes</em></h2>
+      <blockquote class="chef-quote reveal-up">"Fire is the oldest tool in cooking. I simply learned to listen to it."</blockquote>
+      <p class="about-text reveal-up">With 20 years spanning Paris, Copenhagen, and Tokyo, Marco returned to New York to distil everything he learned into a single menu that changes with the seasons and the fire that fuels it.</p>
+      <div class="chef-awards reveal-up">
+        <div class="award">⭐ Michelin Star 2024</div>
+        <div class="award">🏆 James Beard Semifinalist</div>
+        <div class="award">🍷 Wine Spectator Award</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section">
+    <p class="section-label reveal-up" style="text-align:center">What Guests Say</p>
+    <h2 class="section-title reveal-up" style="text-align:center">Voices of <em>Delight</em></h2>
+    <div class="testi-track-wrap">
+      <div class="testi-track" id="testi-track">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"An absolute revelation. The wagyu alone is worth crossing an ocean for. Ember & Oak has ruined fine dining everywhere else for me."</p>
+          <div class="testi-author">— Sarah M., New York</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"The most memorable meal of my life. Every course told a story. Chef Marco's cooking is poetry on a plate."</p>
+          <div class="testi-author">— James T., London</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Impeccable service, breathtaking ambiance, and food that makes time slow down. We celebrated our anniversary here — perfect in every way."</p>
+          <div class="testi-author">— Priya & Rohan K., Toronto</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"The smoked burrata opener set the tone immediately. Bold, balanced, beautiful. I've been recommending Ember & Oak to everyone I know."</p>
+          <div class="testi-author">— Laurent D., Paris</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"From the cocktails to the cheese board, every single detail was considered. This is what hospitality should feel like."</p>
+          <div class="testi-author">— Angela W., Chicago</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-dots" id="testi-dots"></div>
+  </section>
+
+  <!-- Reservations -->
+  <section class="reservations section" id="reservations">
+    <div class="res-content">
+      <p class="section-label reveal-up">Join Us</p>
+      <h2 class="section-title reveal-up">Reserve Your<br/><em>Evening</em></h2>
+      <p class="about-text reveal-up">Tables are released 30 days in advance. We accommodate dietary requirements — please note them in your message.</p>
+      <div class="contact-details reveal-up">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>14 Oak Lane, West Village, New York, NY 10014</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <span>+1 (212) 555-0182</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <span>reservations@emberandoak.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <span>Tue–Sun: 5:30 PM – 11:00 PM</span>
+        </div>
+      </div>
+    </div>
+    <form class="res-form reveal-up" id="res-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Marco" required/>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Reyes" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+1 (212) 000-0000"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" required/>
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <select>
+            <option>5:30 PM</option>
+            <option>6:00 PM</option>
+            <option>6:30 PM</option>
+            <option>7:00 PM</option>
+            <option>7:30 PM</option>
+            <option>8:00 PM</option>
+            <option>8:30 PM</option>
+            <option>9:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label>Guests</label>
+          <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6+ Guests (call us)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label>Special Requests</label>
+        <textarea placeholder="Dietary requirements, celebrations, seating preferences…" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark btn-full">Confirm Reservation</button>
+      <div class="form-success" id="form-success">🎉 Thank you! We'll confirm your reservation within 24 hours.</div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>Ember <span>&</span> Oak</h2>
+        <p>Wood-fired fine dining in the heart of the West Village.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter/X">
+            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reservations">Reservations</a>
+      </div>
+      <div class="footer-links">
+        <h4>Experience</h4>
+        <a href="#">Private Dining</a>
+        <a href="#">Wine Program</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Events</a>
+      </div>
+      <div class="footer-links">
+        <h4>Hours</h4>
+        <p>Tuesday – Sunday</p>
+        <p>5:30 PM – 11:00 PM</p>
+        <p>Closed Mondays</p>
+        <br/>
+        <p>Kitchen closes at 10:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ember & Oak. All rights reserved. Crafted with fire and finesse.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
